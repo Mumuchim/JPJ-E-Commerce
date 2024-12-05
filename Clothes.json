@@ -1,0 +1,77 @@
+[
+    {
+        "id": 1,
+        "name":" Basic Black Top ",
+        "price": 250,
+        "image": "img/cLOTHES/C1.png",
+        "description":"Elevate your wardrobe essentials with this timeless and versatile basic black top. Crafted with meticulous attention to detail, this piece is designed to combine comfort, functionality, and effortless style.Its simplicity allows it to be a perfect foundation for any outfit, whether you're dressing it up for an evening out or keeping it casual for a relaxed day.",
+        "rating": 4.5
+    },
+
+    {
+        "id": 2,
+        "name":"Chic Tie-Front White Peplum Blouse",
+        "price":350 ,
+        "image": "img/cLOTHES/C2.png",
+        "description":"Add a touch of elegance to your wardrobe with this chic tie-front white peplum blouse. The charming bow-tie design on the front creates a soft, feminine look, while the peplum hem enhances your silhouette. Perfect for casual outings or dressed-up occasions, this blouse offers a balance of comfort and style.",
+        "rating": 4.0
+    },
+    {
+        "id": 3,
+        "name":"Elegant Black Office Dress",
+        "price": 1500,
+        "image": "img/cLOTHES/D1.png",
+        "description": "Command attention and exude confidence with this elegant black office dress. Designed with a perfect blend of sophistication and comfort, this wardrobe staple is ideal for making a professional statement. Its timeless silhouette and tailored fit make it a versatile piece, easily transitioning from the boardroom to after-hours events.",
+        "rating": 3.0
+    },
+    {
+        "id": 4,
+        "name":"Asymmetrical Button-Up Pink Cardigan",
+        "price": 850,
+        "image": "img/cLOTHES/C3.png",
+        "description": "Wrap yourself in cozy sophistication with this asymmetrical button-up pink cardigan. Featuring a unique, off-center button design and a soft pastel hue, this cardigan adds a touch of elegance to your casual wardrobe. The relaxed fit and warm fabric make it perfect for layering during cooler seasons.",
+        "rating": 4.5
+    },
+    {
+        "id": 5,
+        "name":"Soft Mint Bow-Accent Cardigan",
+        "price": 875,
+        "image": "img/cLOTHES/C4.png",
+        "description": "Add a whimsical charm to your wardrobe with this soft mint bow-accent cardigan. Crafted from plush, textured fabric, this cardigan combines comfort with feminine elegance. The front bow detail and pearl-accent buttons make it a stylish piece for any casual or semi-formal occasion.",
+        "rating": 4.5
+    },
+    {
+        "id": 6,
+        "name":"Women's Light Blue Tweed Jacket with Bow Collar",
+        "price": 1500,
+        "image": "img/cLOTHES/C5.png",
+        "description": "This is a light blue cropped tweed jacket with a white bow-tie detail on the collar. It features pearl or decorative buttons and patch pockets. The jacket has a classic, elegant style, ideal for a polished, formal, or vintage-inspired look.",
+        "rating": 4.5
+    },
+    {
+        "id": 7,
+        "name":"Casual Chic Brown Collared Crop Top",
+        "price": 250,
+        "image": "img/cLOTHES/C6.png",
+        "description": "Turn heads with this stylish brown collared crop top, blending casual elegance with a modern silhouette. The cropped length, combined with a tailored collar design, makes it a versatile piece that transitions effortlessly from day to night. Whether paired with high-waisted jeans or a skirt, this top adds a touch of sophistication to any outfit.",
+        "rating": 4.0
+    },
+    {
+        "id": 8,
+        "name":"Women's Textured Peplum Top with Bow Hem Detail",
+        "price": 350,
+        "image": "img/cLOTHES/C7.png",
+        "description": "This is a textured cream-colored sleeveless top with a peplum cut, spaghetti straps, and a unique bow-like detail at the back hem. Its elegant design makes it suitable for various occasions.",
+        "rating": 5.0
+    },
+
+    {
+        "id": 9,
+        "name":"Azure Charm Ribbed Button-Up Cardigan",
+        "price": 450,
+        "image": "img/cLOTHES/C8.png",
+        "description": "Elevate your everyday wardrobe with this chic blue ribbed short-sleeved cardigan. Designed with a button-up front and a flattering cropped fit, it offers a perfect blend of comfort and style. Crafted from soft, breathable fabric, it’s ideal for layering over a casual tank top or pairing with high-waisted jeans for a trendy look.",
+        "rating": 4.5
+    }
+
+]

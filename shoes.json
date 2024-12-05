@@ -1,0 +1,77 @@
+[
+    {
+        "id": 1,
+        "name":"coffee-brown chunky platform shoes",
+        "price": 250,
+        "image": "img/Shoes/S1.png",
+        "description":"The design includes a classic Bini Aiah strap with an adjustable buckle, offering both style and a secure fit. Perfect for casual outings or semi-formal events, they provide all-day comfort with a padded insole and a non-slip rubber sole for added durability. The neutral tones make them easy to pair with a variety of outfits, adding a touch of elegance to your wardrobe.",
+        "rating": 4.5
+    },
+
+    {
+        "id": 2,
+        "name":"Glossy Pink Block Heels",
+        "price":350 ,
+        "image": "img/Shoes/S2.png",
+        "description": "Combining timeless elegance with a playful touch, these shoes feature a sleek patent finish and a sturdy block heel for all-day comfort. The delicate strap with a buckle detail adds charm, making these heels perfect for both casual and formal occasions.",
+        "rating": 4.5
+    },
+    {
+        "id": 3,
+        "name":"Celeste Gloss T-Strap Heels",
+        "price": 1500,
+        "image": "img/Shoes/S3.png",
+        "description": "Step into timeless elegance with these Celeste Gloss T-Strap Heels, featuring a glossy sky-blue finish and a comfortable block heel. The chic T-strap design adds a touch of sophistication, perfect for both casual and formal occasions. Made with durable materials and a secure buckle strap, these heels ensure style without compromising comfort.",
+        "rating": 4.5
+    },
+    {
+        "id": 4,
+        "name":"Ivory Charm Heels",
+        "price": 850,
+        "image": "img/Shoes/S7.png",
+        "description":"Add a classic touch to your wardrobe with these Ivory Charm Heels, designed with a glossy finish and a timeless silhouette. The adjustable strap ensures a secure fit, while the sturdy block heel offers all-day comfort. Perfect for office wear, casual outings, or special occasions, these heels blend elegance with practicality.",
+        "rating": 4.5
+    },
+    {
+        "id": 5,
+        "name":"Beige Luxe Buckle Strap Mules",
+        "price": 875,
+        "image": "img/Shoes/S11.png",
+        "description": "Step into sophistication with these Beige Luxe Buckle Strap Mules, featuring a sleek square-toe design and chic buckle accents. The mid-heel provides a perfect balance of comfort and elegance, making them ideal for both casual and formal wear. Crafted with premium materials, these mules add a refined touch to any outfit.",
+        "rating": 4.5
+    },
+    {
+        "id": 6,
+        "name":"Blush Pink Block Heel Sandals with Bow and Ankle Strap",
+        "price": 1500,
+        "image": "img/Shoes/S18.png",
+        "description": "These are elegant blush-pink block-heeled sandals with ankle straps and delicate bow details on the front straps. They combine feminine charm with comfort, making them ideal for dressy or semi-formal occasions.",
+        "rating": 4.5
+    },
+    {
+        "id": 7,
+        "name":"Nude Strappy Women Sandals",
+        "price": 250,
+        "image": "img/Shoes/S19.png",
+        "description": "Add a touch of understated elegance to your footwear collection with these nude strappy women’s sandals. Designed for both style and comfort, these sandals feature sleek straps and a versatile nude shade that complements any outfit. Whether you’re heading to a brunch, a casual outing, or a formal event, these sandals are a perfect go-to choice for effortless sophistication.",
+        "rating": 4.5
+    },
+    {
+        "id": 8,
+        "name":"Beige Slip-On Block Heel Sandals with Crossover Straps",
+        "price": 350,
+        "image": "img/Shoes/S22..png",
+        "description":"These are minimalist beige block-heeled slip-on sandals with a crossover strap design. They are versatile and comfortable, suitable for casual or semi-formal occasions.",
+        "rating": 4.5
+    },
+
+    {
+        "id": 9,
+        "name":"Scarlet Pearl Sandals",
+        "price": 450,
+        "image": "img/Shoes/S23.png",
+        "description":"These stunning scarlet pearl sandals are the epitome of elegance, blending bold color with delicate embellishments. Perfect for special occasions or making a statement with your outfit.",
+        "rating": 4.5
+    }
+
+]

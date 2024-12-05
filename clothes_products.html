@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Product List</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div class="container">
+            <div class="title">PRODUCT LIST</div>
+            <div class="listProduct">
+                <!-- Product items will be injected here -->
+            </div>
+        </div>
+
+        <script>
+            let products = null;
+            
+            // Fetch data from the 'Clothes.json' file
+            fetch('Clothes.json')
+                .then(response => response.json())
+                .then(data => {
+                    products = data;
+                    addDataToHTML();
+                });
+
+            function addDataToHTML() {
+                // Clear the previous content
+                let listProductHTML = document.querySelector('.listProduct');
+                listProductHTML.innerHTML = ''; // Clear any existing products
+
+                // Add new data
+                if (products !== null) {
+                    products.forEach(product => {
+                        let newProduct = document.createElement('a');
+                        newProduct.href = '/clothes_details.html?id=' + product.id;
+                        newProduct.classList.add('item');
+                        newProduct.innerHTML = `
+                            <img src="${product.image}" alt="${product.name}">
+                            <h2>${product.name}</h2>
+                            <div class="price">₱${product.price}</div>
+                            <div class="star-rating">${getStarsHTML(product.rating)}</div>
+                        `;
+                        listProductHTML.appendChild(newProduct);
+                    });
+                }
+            }
+
+            // Function to generate stars based on the rating value (out of 5)
+            function getStarsHTML(rating) {
+                let fullStars = Math.floor(rating); // Number of full stars
+                let halfStar = rating % 1 >= 0.5 ? 1 : 0; // Half-star if the rating is >= 0.5
+                let emptyStars = 5 - fullStars - halfStar; // Remaining empty stars
+
+                let starsHTML = '';
+
+                // Add full stars
+                for (let i = 0; i < fullStars; i++) {
+                    starsHTML += '<span class="star">★</span>';
+                }
+
+                // Add half star if applicable
+                if (halfStar) {
+                    starsHTML += '<span class="star">☆</span>';
+                }
+
+                // Add empty stars
+                for (let i = 0; i < emptyStars; i++) {
+                    starsHTML += '<span class="star star-empty">☆</span>';
+                }
+
+                return starsHTML;
+            }
+        </script>
+    </body>
+</html>

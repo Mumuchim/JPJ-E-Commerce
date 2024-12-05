@@ -5,7 +5,7 @@
 :root {
   --white: #fff;
   --black: #222;
-  --green: #6cbe02;
+  --green: #b17f7f;
   --grey1: #f0f0f0;
   --grey2: #e9d7d3;
 }
@@ -1475,3 +1475,215 @@ th:last-child {
 .cart-checkbox:focus {
   outline: none; /* Remove the default focus outline */
 }
+
+/*AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA*/
+
+/* Header Styling */
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  padding: 1rem 2rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  margin-top: 0;  /* Remove any margin above header */
+}
+
+header .logo {
+  position: absolute;  /* Position logo at the top left */
+  left: 2rem;
+  font-size: 2rem;
+  font-weight: bold;
+  color: var(--green);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+nav {
+  display: flex;
+  justify-content: center;  /* Centers the nav items */
+  align-items: center;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 3rem; /* Adjust gap between nav items */
+}
+
+nav ul li {
+  padding: 0.5rem 1rem;
+  font-size: 1.4rem;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+/* Hover Effect */
+nav ul li a:hover {
+  color: var(--green);
+}
+
+nav .menu-toggle {
+  display: none; /* Hide menu toggle by default */
+}
+
+/* For small screens */
+@media only screen and (max-width: 768px) {
+  header {
+    padding: 1rem;
+  }
+
+  nav ul {
+    display: none; /* Hide the menu by default on mobile */
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: #fff;
+    flex-direction: column;
+    gap: 1rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 1rem 2rem;
+    justify-content: center;  /* Center items on mobile */
+  }
+
+  nav ul li {
+    font-size: 1.6rem;
+    padding: 0.5rem 0;
+  }
+
+  nav .menu-toggle {
+    display: block;  /* Show the menu toggle on small screens */
+    font-size: 2rem;
+    cursor: pointer;
+  }
+
+  /* Show the menu when the toggle is active */
+  nav.active ul {
+    display: flex;
+  }
+
+
+}
+
+/* Menu Toggle Button */
+.menu-toggle {
+  font-size: 2rem;
+  cursor: pointer;
+  color: #333;
+  transition: color 0.3s ease;
+}
+
+.menu-toggle:hover {
+  color: var(--green);
+}
+
+/* General Styling */
+.navigation {
+  background-color: #f0e7e7;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.nav-center {
+  display: flex;
+  justify-content: space-between; /* Space out logo and nav links */
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.nav-list {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 3rem; /* Space between each navigation item */
+}
+
+.nav-item {
+  position: relative;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: #333;
+  font-size: 1.6rem;
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+  color: var(--green);
+}
+
+/* Logo Styling */
+.logo h1 {
+  font-size: 2rem;
+  font-weight: bold;
+  color: var(--green);
+  letter-spacing: 1px;
+  margin: 0;
+}
+
+/* Icons Section */
+.icons {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.icon {
+  position: relative;
+}
+
+.icon i {
+  font-size: 2rem;
+  color: #333;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.icon i:hover {
+  color: var(--green);
+}
+
+
+/* Mobile and Responsive Design */
+@media only screen and (max-width: 768px) {
+  .nav-center {
+    flex-direction: column; /* Stack logo and navigation on small screens */
+    align-items: center;
+  }
+
+  .nav-list {
+    flex-direction: column; /* Stack nav items vertically */
+    align-items: center;
+    margin-top: 1rem;
+  }
+
+  .icons {
+    margin-top: 1rem;
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  .logo h1 {
+    font-size: 1.8rem;
+  }
+
+  .nav-item {
+    padding: 0.5rem 0;
+  }
+}
+

@@ -1,0 +1,77 @@
+[
+    {
+        "id": 1,
+        "name":"Warm Chestnut Bag",
+        "price": 250,
+        "image": "img/BAG/B23.png",
+        "description":"The Warm Chestnut Bag embodies effortless elegance with its timeless design and rich craftsmanship. Made from luxurious chestnut-toned leather, this bag features a smooth, structured silhouette adorned with a signature gold-tone accent for a refined touch. Its versatile top handle and optional crossbody strap ensure style and functionality, whether you're heading to the office or an evening event. ",
+        "rating": 4.5
+    },
+
+    {
+        "id": 2,
+        "name":"Dark Coffee Shade Bag",
+        "price":350 ,
+        "image": "img/BAG/b24.png",
+        "description":"Elevate your wardrobe with the Dark Coffee Shade Bag, a stunning blend of sophistication and versatility. Crafted from premium leather in a rich, dark coffee hue, this bag exudes timeless charm. The gold-tone centerpiece adds a luxurious accent, while its structured design ensures a polished look. Featuring a comfortable top handle and an optional crossbody strap, this bag seamlessly adapts to any occasion.",
+        "rating": 4.5
+    },
+    {
+        "id": 3,
+        "name":"Night Black Bag",
+        "price": 1500,
+        "image": "img/BAG/B26.png",
+        "description":"Bold, elegant, and timeless—the Night Black Bag is the epitome of classic sophistication. Crafted from smooth black leather, this bag showcases a minimalist design highlighted by a striking gold-tone centerpiece. Its structured silhouette and compact size make it the perfect companion for both day and evening affairs. Featuring a sleek top handle and an optional adjustable strap, the Night Black Bag offers versatility without compromising style.",
+        "rating": 4.5
+    },
+    {
+        "id": 4,
+        "name":"Luxe Minimalist Shoulder Bag",
+        "price": 850,
+        "image": "img/BAG/b1.1.png",
+        "description":"The Luxe Minimalist Shoulder Bag combines timeless elegance with modern functionality. Its structured silhouette, crafted from smooth beige leather, exudes sophistication and is complemented by sleek black edging. The bag features a single curved top handle for easy carrying, while the gold-tone hardware and signature clasp closure add a touch of refined luxury. Perfect for day-to-night transitions, this accessory is a wardrobe essential for anyone seeking understated glamour.",
+        "rating": 4.5
+    },
+    {
+        "id": 5,
+        "name":"Sage Green Crescent Shoulder Bag",
+        "price": 875,
+        "image": "img/BAG/B21.png",
+        "description":"Effortlessly stylish and modern, the Sage Green Crescent Shoulder Bag is designed for those who love simplicity with a twist. Its unique crescent shape, paired with the soothing sage green color, makes it a standout accessory. Made from high-quality vegan leather, the bag is both chic and eco-friendly.",
+        "rating": 4.5
+    },
+    {
+        "id": 6,
+        "name":" Ivory Woven Handle Bag",
+        "price": 1500,
+        "image": "img/BAG/bag1.png",
+        "description":"The Ivory Woven Handle Bag embodies timeless elegance with its intricately crafted design. Made from high-quality woven leather, this bag features a soft, textured appearance that elevates its sophisticated charm. The braided top handle adds an artisanal touch, while the gold-tone knot detail provides a hint of opulence.",
+        "rating": 4.5
+    },
+    {
+        "id": 7,
+        "name":"Bella Tweed Shoulder Bag",
+        "price": 250,
+        "image": "img/BAG/bag2.png",
+        "description":"Elevate your style with the Bella Tweed Shoulder Bag, a perfect blend of classic charm and modern sophistication. Crafted with a pastel tweed fabric and framed by elegant blush-tone leather, this bag exudes timeless grace. Its structured silhouette is complemented by a gold-tone clasp, adding a touch of glamour to your everyday essentials. Designed for versatility, the adjustable shoulder strap ensures a comfortable fit for any occasion.",
+        "rating": 4.5
+    },
+    {
+        "id": 8,
+        "name":"Denim Shoulder Bag",
+        "price": 350,
+        "image": "img/BAG/bag3.png",
+        "description":"Effortlessly chic, the Camille Denim Shoulder Bag combines casual elegance with luxury craftsmanship. Made from premium monogrammed denim and accented with smooth caramel leather trim, this bag is a versatile addition to any wardrobe. The playful bow-tie closure adds a feminine touch, while the detachable leather tag enhances its sophisticated appeal.",
+        "rating": 4.5
+    },
+
+    {
+        "id": 9,
+        "name":"Luna Crescent Mini Bag",
+        "price": 450,
+        "image": "img/BAG/bag4.png",
+        "description":"Sleek and timeless, the Luna Crescent Mini Bag is a masterpiece of understated luxury. Crafted from premium black leather with a smooth, polished finish, this bag is adorned with a bold crescent-shaped gold-tone emblem that adds a touch of sophistication. Its compact design is perfect for carrying your essentials, while the structured top handle offers a refined silhouette.",
+        "rating": 4.5
+    }
+
+]

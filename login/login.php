@@ -33,7 +33,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         if ($user && password_verify($password, $user['password'])) {
             $response['status'] = 'success';
             $response['message'] = 'Login successful!';
-            $response['redirect'] = '/home.php'; // Add the redirect URL
+            $response['redirect'] = '/homepage.php'; // Add the redirect URL
         } else {
             $response['status'] = 'error';
             $response['message'] = 'Invalid username or password!';

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Product List</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div class="container">
+            <div class="title">BAGS</div>
+            <div class="listProduct"></div>
+        </div>
+
+        <script>
+            let products = null;
+            // get datas from file json
+            fetch('bag.json')
+                .then(response => response.json())
+                .then(data => {
+                    products = data;
+                    addDataToHTML();
+            })
+
+            function addDataToHTML(){
+                // remove datas default from HTML
+                let listProductHTML = document.querySelector('.listProduct');
+                listProductHTML.innerHTML = '';   
+                // add new datas
+                if(products != null) // if has data
+                {
+                    products.forEach(product => {
+                        let newProduct = document.createElement('a');
+                        newProduct.href = 'bag_details.html?id=' + product.id;
+                        newProduct.classList.add('item');
+                        newProduct.innerHTML = 
+                        `<img src="${product.image}" alt="">
+                        <h2>${product.name}</h2>
+                        <div class="price">₱${product.price}</div>
+                        <div class="star-rating">${getStarsHTML(product.rating)}</div>`;
+                        listProductHTML.appendChild(newProduct);
+
+                    });
+                }
+            }
+
+            function getStarsHTML(rating) {
+                let fullStars = Math.floor(rating); // Number of full stars
+                let halfStar = rating % 1 >= 0.5 ? 1 : 0; // Half-star if the rating is >= 0.5
+                let emptyStars = 5 - fullStars - halfStar; // Remaining empty stars
+
+                let starsHTML = '';
+
+                // Add full stars
+                for (let i = 0; i < fullStars; i++) {
+                    starsHTML += '<span class="star">★</span>';
+                }
+
+                // Add half star if applicable
+                if (halfStar) {
+                    starsHTML += '<span class="star">☆</span>';
+                }
+
+                // Add empty stars
+                for (let i = 0; i < emptyStars; i++) {
+                    starsHTML += '<span class="star star-empty">☆</span>';
+                }
+
+                return starsHTML;
+            }
+        </script>
+    </body>
+</html>

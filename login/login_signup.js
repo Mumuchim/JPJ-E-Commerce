@@ -69,18 +69,17 @@ $(function() {
     var email = $('#signup-email').val();
     var password = $('#signup-password').val();
 
-    // Check if all fields are filled
     if (username && email && password) {
       $.ajax({
         type: 'POST',
-        url: 'signup.php', // Ensure this points to your server-side processing file
+        url: 'signup.php', // Update this based on your project structure
         data: {
           username: username,
           email: email,
           password: password
         },
         success: function(response) {
-          console.log('Raw response:', response); // Log the raw response
+          console.log('Raw response:', response);
 
           try {
             var result = JSON.parse(response);
@@ -92,7 +91,6 @@ $(function() {
                 icon: 'success'
               }).then((result) => {
                 if (result.isConfirmed) {
-                  // Clear the form fields
                   $('#signup-username').val('');
                   $('#signup-email').val('');
                   $('#signup-password').val('');
@@ -115,7 +113,10 @@ $(function() {
             });
           }
         },
-        error: function() {
+        error: function(xhr, status, error) {
+          console.error(`Error: ${error}`);
+          console.error(`Status: ${status}`);
+          console.error(`Response: ${xhr.responseText}`);
           Swal.fire({
             title: 'Error',
             text: 'There were errors while saving the data.',

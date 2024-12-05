@@ -86,3 +86,88 @@ for (let i = 0; i < accordionBtn.length; i++) {
   });
 
 }
+
+    document.querySelectorAll('.add-to-cart').forEach(button => {
+        button.addEventListener('click', function () {
+            const productId = this.getAttribute('data-product-id');
+            const productName = this.getAttribute('data-product-name');
+            const productPrice = this.getAttribute('data-product-price');
+
+            // Send data to the server
+            fetch('php/add_to_cart.php', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                    product_id: productId,
+                    product_name: productName,
+                    product_price: productPrice,
+                }),
+            })
+                .then(response => response.json())
+                .then(data => {
+                    if (data.success) {
+                        // Update the cart count
+                        const countElement = document.querySelector('.count');
+                        countElement.textContent = data.cart_count;
+                        alert('Item added to cart!');
+                    } else {
+                        alert('Failed to add item to cart.');
+                    }
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                    alert('An error occurred while adding to the cart.');
+                });
+        });
+    });
+
+          $(document).ready(function() {
+            $('#addToCartForm').submit(function(e) {
+              e.preventDefault(); // Prevent default form submission
+    
+              var formData = $(this).serialize(); // Serialize form data
+    
+              $.ajax({
+                type: 'POST',
+                url: '/php/add_to_cart.php', // Path to your PHP script
+                data: formData,
+                success: function(response) {
+                  try {
+                    var result = JSON.parse(response);
+    
+                    if (result.status === 'success') {
+                      Swal.fire({
+                        title: 'Added to Cart!',
+                        text: result.message,
+                        icon: 'success',
+                        timer: 2000,
+                        showConfirmButton: false,
+                      });
+                    } else {
+                      Swal.fire({
+                        title: 'Error',
+                        text: result.message,
+                        icon: 'error',
+                      });
+                    }
+                  } catch (e) {
+                    console.error('Invalid JSON response:', e);
+                    Swal.fire({
+                      title: 'Error',
+                      text: 'Invalid response from server.',
+                      icon: 'error',
+                    });
+                  }
+                },
+                error: function() {
+                  Swal.fire({
+                    title: 'Error',
+                    text: 'Unable to process the request.',
+                    icon: 'error',
+                  });
+                },
+              });
+            });
+          });

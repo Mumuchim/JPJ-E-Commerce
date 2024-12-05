@@ -9,72 +9,80 @@
       href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css"
     />
     <!-- Custom StyleSheet -->
-    <link rel="stylesheet" href="assets\css\product.css" />
+  
+    <link rel="stylesheet" href="assets/css/bottom.css" />
+    <link rel="stylesheet" href="assets/css/product.css" />
     <title>Your Cart</title>
   </head>
+
+
+
+  
   <body>
-    <!-- Navigation -->
+   <!--
+    - HEADER
+  -->
+
+  <header>
+
+    <div class="header-main">
+
+      <div class="container">
+
+        <a href="#" class="header-logo">
+          <img src="./assets/images/logo.png" alt="Anon's logo" width="200" height="30">
+        </a>
+
+        <div class="header-search-container">
+
+          <input type="search" name="search" class="search-field" placeholder="Enter your product name...">
+
+          <button class="search-btn">
+            <ion-icon name="search-outline"></ion-icon>
+          </button>
+
+        </div>
+
+        <div class="header-user-actions">
+
+         
+
+        <a href="cart.html" class="action-btn" style="display: inline-flex; align-items: center; text-decoration: none;">
+    <ion-icon name="bag-handle-outline"></ion-icon>
+    <span class="count">0</span>
+</a>
+
  
-    <div class="navigation">
-      <div class="nav-center container d-flex">
-        <a href="index.html" class="logo"><h1>Dans</h1></a>
-
-        <ul class="nav-list d-flex">
-          <li class="nav-item">
-            <a href="/" class="nav-link">Home</a>
-          </li>
-          <li class="nav-item">
-            <a href="product.html" class="nav-link">Shop</a>
-          </li>
-          <li class="nav-item">
-            <a href="#terms" class="nav-link">Terms</a>
-          </li>
-          <li class="nav-item">
-            <a href="#about" class="nav-link">About</a>
-          </li>
-          <li class="nav-item">
-            <a href="#contact" class="nav-link">Contact</a>
-          </li>
-          <li class="icons d-flex">
-            <a href="login.html" class="icon">
-              <i class="bx bx-user"></i>
-            </a>
-            <div class="icon">
-              <i class="bx bx-search"></i>
-            </div>
-            <div class="icon">
-              <i class="bx bx-heart"></i>
-              <span class="d-flex">0</span>
-            </div>
-            <a href="cart.html" class="icon">
-              <i class="bx bx-cart"></i>
-              <span class="d-flex">0</span>
-            </a>
-          </li>
-        </ul>
-
-        <div class="icons d-flex">
-          <a href="login.html" class="icon">
-            <i class="bx bx-user"></i>
-          </a>
-          <div class="icon">
-            <i class="bx bx-search"></i>
-          </div>
-          <div class="icon">
-            <i class="bx bx-heart"></i>
-            <span class="d-flex">0</span>
-          </div>
-          <a href="cart.html" class="icon">
-            <i class="bx bx-cart"></i>
-            <span class="d-flex">0</span>
-          </a>
-        </div>
-
-        <div class="hamburger">
-          <i class="bx bx-menu-alt-left"></i>
-        </div>
-      </div>
+          <div class="dropdown">
+    <button class="header-action-btn" aria-label="user" style="display: flex; align-items: center; gap: 10px;">
+        <ion-icon name="person-outline" aria-hidden="true"></ion-icon>
+        <span>
+            <?php 
+               if (isset($_SESSION['username'])) {
+                echo htmlspecialchars($_SESSION['username']);
+            } else {
+                echo "Guest";
+            }
+            
+            ?>
+        </span>
+    </button>
+    <div class="dropdown-content">
+        <a href="profile.php">Account</a>
+        <a href="cart.html">Cart</a>
+        <a href="logout.php">Log out</a>
     </div>
+</div>
+
+
+          
+
+        </div>
+
+      </div>
+
+    </div>
+
 
     <!-- Cart Items -->
     <div class="container cart">
@@ -88,34 +96,35 @@
         <tr>
           <td>
             <div class="cart-info">
-              <input type="checkbox" class="cart-checkbox" data-price="50" /> <!-- Checkbox for selection -->
+              <input type="checkbox" class="cart-checkbox" data-price="29.99" /> <!-- Checkbox for selection -->
               <img src="./images/product-2.jpg" alt="" />
               <div>
-                <p>Boy’s T-Shirt</p>
-                <span>Price: $50.00</span> <br />
-                <a href="#">remove</a>
+                <p>Product Name</p>
+                <span>Price: $29.99</span><br />
+                <a href="#" class="remove">remove</a>
               </div>
             </div>
           </td>
-          <td><input type="number" value="1" min="1" /></td>
-          <td class="product-price">$50.00</td>
-        </tr>
+          <td><input type="number" value="1" min="1" class="product-quantity" /></td>
+          <td class="product-price">$29.99</td>
+        </tr>        
 
         <tr>
           <td>
             <div class="cart-info">
-              <input type="checkbox" class="cart-checkbox" data-price="50" /> <!-- Checkbox for selection -->
+              <input type="checkbox" class="cart-checkbox" data-price="29.99" /> <!-- Checkbox for selection -->
               <img src="./images/product-2.jpg" alt="" />
               <div>
-                <p>Boy’s T-Shirt</p>
-                <span>Price: $50.00</span> <br />
-                <a href="#">remove</a>
+                <p>Product Name</p>
+                <span>Price: $29.99</span><br />
+                <a href="#" class="remove">remove</a>
               </div>
             </div>
           </td>
-          <td><input type="number" value="1" min="1" /></td>
-          <td class="product-price">$50.00</td>
+          <td><input type="number" value="1" min="1" class="product-quantity" /></td>
+          <td class="product-price">$29.99</td>
         </tr>
+        
         
       </table>
       <div class="total-price">
@@ -137,10 +146,12 @@
       </div>
       
       
-    <!-- Latest Products -->
+    <!-- 
+      <br> Products -->
     <section class="section featured">
       <div class="top container">
         <h1>Latest Products</h1>
+        
         <a href="#" class="view-more">View more</a>
       </div>
       <div class="product-center container">
@@ -198,52 +209,347 @@
             <li><i class="bx bx-cart add-to-cart" data-product="Concepts Solid Pink Men’s Polo" data-price="150"></i></li>
           </ul>
         </div>
-        <div class="product-item">
-          <div class="overlay">
-            <a href="" class="product-thumb">
-              <img src="./images/product-2.jpg" alt="" />
-            </a>
-          </div>
-          <div class="product-info">
-            <span>MEN'S CLOTHES</span>
-            <a href="">Concepts Solid Pink Men’s Polo</a>
-            <h4>$150</h4>
-          </div>
-          <ul class="icons">
-            <li><i class="bx bx-heart"></i></li>
-            <li><i class="bx bx-search"></i></li>
-            <li><i class="bx bx-cart add-to-cart" data-product="Concepts Solid Pink Men’s Polo" data-price="150"></i></li>
-          </ul>
-        </div>
-      </div>
+      
     </section>
 
-    <!-- Footer -->
-    <footer class="footer">
-      <div class="row">
-        <div class="col d-flex">
-          <h4>INFORMATION</h4>
-          <a href="">About us</a>
-          <a href="">Contact Us</a>
-          <a href="">Term & Conditions</a>
-          <a href="">Shipping Guide</a>
+
+    
+
+
+    <!--
+      - TESTIMONIALS, CTA & SERVICE
+    -->
+
+    <div>
+
+      <div class="container">
+
+        <div class="testimonials-box">
+
+          <!--
+            - TESTIMONIALS
+          -->
+
+          <div class="testimonial">
+
+            <h2 class="title">Members</h2>
+
+            <div class="testimonial-card">
+
+              <img src="./assets/images/testimonial-1.jpg" alt="alan doe" class="testimonial-banner" width="80" height="80">
+
+              <p class="testimonial-name">Carag, Pauline Kaye B. <br> Cereneo, Jerome Isaac <br> Doldol, Jhewen Shene B. <br> Trocio, Joan</p>
+            </div>
+
+          </div>
+
+
+
+          <!--
+            - CTA
+          -->
+
+          <div class="cta-container">
+
+            <img src="./assets/images/cta-banner.jpg" alt="summer collection" class="cta-banner">
+
+            <a href="#" class="cta-content">
+
+              <p class="discount">25% Discount</p>
+
+              <h2 class="cta-title">Summer collection</h2>
+
+              <p class="cta-text">Starting @ ₱10</p>
+
+              <button class="cta-btn">Shop now</button>
+
+            </a>
+
+          </div>
+
+
+
+          <!--
+            - SERVICE
+          -->
+
+           <div class="service">
+
+            <h2 class="title">Our Services</h2>
+
+            <div class="service-container">
+
+              <a href="#" class="service-item">
+
+                <div class="service-icon">
+                  <ion-icon name="boat-outline"></ion-icon>
+                </div>
+
+                <div class="service-content">
+
+                  <h3 class="service-title">Worldwide Delivery</h3>
+                  <p class="service-desc">For Order Over ₱100</p>
+
+                </div>
+
+              </a>
+
+              <a href="#" class="service-item">
+              
+                <div class="service-icon">
+                  <ion-icon name="rocket-outline"></ion-icon>
+                </div>
+              
+                <div class="service-content">
+              
+                  <h3 class="service-title">Next Day delivery</h3>
+                  <p class="service-desc">PH Orders Only</p>
+              
+                </div>
+              
+              </a>
+
+              <a href="#" class="service-item">
+              
+                <div class="service-icon">
+                  <ion-icon name="call-outline"></ion-icon>
+                </div>
+              
+                <div class="service-content">
+              
+                  <h3 class="service-title">Best Online Support</h3>
+                  <p class="service-desc">Hours: 8AM - 11PM</p>
+              
+                </div>
+              
+              </a>
+
+              <a href="#" class="service-item">
+              
+                <div class="service-icon">
+                  <ion-icon name="arrow-undo-outline"></ion-icon>
+                </div>
+              
+                <div class="service-content">
+              
+                  <h3 class="service-title">Return Policy</h3>
+                  <p class="service-desc">Easy & Free Return</p>
+              
+                </div>
+              
+              </a>
+
+              <a href="#" class="service-item">
+              
+                <div class="service-icon">
+                  <ion-icon name="ticket-outline"></ion-icon>
+                </div>
+              
+                <div class="service-content">
+              
+                  <h3 class="service-title">30% money back</h3>
+                  <p class="service-desc">For Order Over ₱100</p>
+              
+                </div>
+              
+              </a>
+
+            </div>
+
+          </div>
+
         </div>
-        <div class="col d-flex">
-          <h4>USEFUL LINK</h4>
-          <a href="">Online Store</a>
-          <a href="">Customer Services</a>
-          <a href="">Promotion</a>
-          <a href="">Top Brands</a>
-        </div>
-        <div class="col d-flex">
-          <span><i class="bx bxl-facebook-square"></i></span>
-          <span><i class="bx bxl-instagram-alt"></i></span>
-          <span><i class="bx bxl-github"></i></span>
-          <span><i class="bx bxl-twitter"></i></span>
-          <span><i class="bx bxl-pinterest"></i></span>
-        </div>
+
       </div>
-    </footer>
+
+    </div> 
+
+  </main>
+
+  <!--
+    - FOOTER
+  -->
+
+  <footer>
+    <div class="footer-nav">
+
+      <div class="container">
+
+        <ul class="footer-nav-list">
+
+          <li class="footer-nav-item">
+            <h2 class="nav-title">Popular Categories</h2>
+          </li>
+
+          <li class="footer-nav-item">
+            <a href="#" class="footer-nav-link">Fashion</a>
+          </li>
+
+          <li class="footer-nav-item">
+            <a href="#" class="footer-nav-link">Electronic</a>
+          </li>
+
+          <li class="footer-nav-item">
+            <a href="#" class="footer-nav-link">Cosmetic</a>
+          </li>
+
+          <li class="footer-nav-item">
+            <a href="#" class="footer-nav-link">Health</a>
+          </li>
+
+          <li class="footer-nav-item">
+            <a href="#" class="footer-nav-link">Watches</a>
+          </li>
+
+        </ul>
+
+        <ul class="footer-nav-list">
+        
+          <li class="footer-nav-item">
+            <h2 class="nav-title">Products</h2>
+          </li>
+        
+          <li class="footer-nav-item">
+            <a href="#" class="footer-nav-link">Prices drop</a>
+          </li>
+        
+          <li class="footer-nav-item">
+            <a href="#" class="footer-nav-link">New products</a>
+          </li>
+        
+          <li class="footer-nav-item">
+            <a href="#" class="footer-nav-link">Best sales</a>
+          </li>
+        
+          <li class="footer-nav-item">
+            <a href="#" class="footer-nav-link">Contact us</a>
+          </li>
+        
+          <li class="footer-nav-item">
+            <a href="#" class="footer-nav-link">Sitemap</a>
+          </li>
+        
+        </ul>
+
+        <ul class="footer-nav-list">
+        
+          <li class="footer-nav-item">
+            <h2 class="nav-title">Services</h2>
+          </li>
+        
+          <li class="footer-nav-item">
+            <a href="#" class="footer-nav-link">Prices drop</a>
+          </li>
+        
+          <li class="footer-nav-item">
+            <a href="#" class="footer-nav-link">New products</a>
+          </li>
+        
+          <li class="footer-nav-item">
+            <a href="#" class="footer-nav-link">Best sales</a>
+          </li>
+        
+          <li class="footer-nav-item">
+            <a href="#" class="footer-nav-link">Contact us</a>
+          </li>
+        
+          <li class="footer-nav-item">
+            <a href="#" class="footer-nav-link">Sitemap</a>
+          </li>
+        
+        </ul>
+
+        <ul class="footer-nav-list">
+
+          <li class="footer-nav-item">
+            <h2 class="nav-title">Contact</h2>
+          </li>
+
+          <li class="footer-nav-item flex">
+            <div class="icon-box">
+              <ion-icon name="location-outline"></ion-icon>
+            </div>
+
+            <address class="content">
+              Bocaue, Bulacan
+            </address>
+          </li>
+
+          <li class="footer-nav-item flex">
+            <div class="icon-box">
+              <ion-icon name="call-outline"></ion-icon>
+            </div>
+
+            <a href="#" class="footer-nav-link">(+69) 123 456 789</a>
+          </li>
+
+          <li class="footer-nav-item flex">
+            <div class="icon-box">
+              <ion-icon name="mail-outline"></ion-icon>
+            </div>
+
+            <a href="#" class="footer-nav-link">jpjFashion@gmail.com</a>
+          </li>
+
+        </ul>
+
+        <ul class="footer-nav-list">
+
+          <li class="footer-nav-item">
+            <h2 class="nav-title">Follow Us</h2>
+          </li>
+
+          <li>
+            <ul class="social-link">
+
+              <li class="footer-nav-item">
+                <a href="#" class="footer-nav-link">
+                  <ion-icon name="logo-facebook"></ion-icon>
+                </a>
+              </li>
+
+              <li class="footer-nav-item">
+                <a href="#" class="footer-nav-link">
+                  <ion-icon name="logo-twitter"></ion-icon>
+                </a>
+              </li>
+
+              <li class="footer-nav-item">
+                <a href="#" class="footer-nav-link">
+                  <ion-icon name="logo-linkedin"></ion-icon>
+                </a>
+              </li>
+
+              <li class="footer-nav-item">
+                <a href="#" class="footer-nav-link">
+                  <ion-icon name="logo-instagram"></ion-icon>
+                </a>
+              </li>
+
+            </ul>
+          </li>
+
+        </ul>
+
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+
+      <div class="container">
+
+        <img src="./assets/images/payment.png" alt="payment method" class="payment-img">
+
+        <p class="copyright">
+          Copyright &copy; <a href="#">JPJ</a> all rights reserved.
+        </p>
+
+      </div>
+
+    </div>
+
+  </footer>
 
     <div id="notification" class="hidden">
       <i class="bx bx-check"></i>
@@ -253,5 +559,7 @@
 
     <!-- Custom Script -->
     <script src="assets\js\index.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
   </body>
 </html>
