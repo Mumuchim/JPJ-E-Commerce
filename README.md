@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # How to make page detail product page using HTML CSS and Javascript Only
 
 ```http
@@ -9,3 +10,6 @@ but still encounter errors when running the program,
 - [https://www.youtube.com/watch?v=okyfcpZfPAU&t=142s](https://www.youtube.com/watch?v=okyfcpZfPAU&t=142s)
 
 ![Logo](https://i.ytimg.com/vi/okyfcpZfPAU/maxresdefault.jpg)
+=======
+wompwomp
+>>>>>>> 001e034a5b975ef73c4cf6f624f709382f3e6cbf
